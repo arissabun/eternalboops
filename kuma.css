@@ -1,0 +1,103 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url('https://www.transparenttextures.com/patterns/natural-paper.png'), #f0eee7;
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  background-repeat: repeat;
+  line-height: 1.6;
+  text-align: center;
+}
+
+header {
+  background-color: #4a5c40;
+  color: white;
+  padding: 2rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #cde1c4;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: #ffffffd9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.photo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dog-photo {
+  width: 400px;
+  border-radius: 10px;
+  border: 4px solid #8b5e3c;
+  user-select: none;
+}
+
+.nose-click-area {
+  position: absolute;
+  top: 30%;   /* Adjust vertical position to nose */
+  left: 50%;  /* Adjust horizontal position to nose */
+  width: 80px;  /* Larger clickable area */
+  height: 80px;
+  cursor: pointer;
+  background-color: transparent; /* invisible but clickable */
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Pink sparkle effect */
+/*.sparkle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #ff69b4 60%, transparent 100%);
+  border-radius: 50%;
+  animation: sparkle-animation 1s ease-out forwards;
+  pointer-events: none; 
+
+} */
+/* Better sparkles? */
+.sparkle {
+  position: absolute;
+  font-size: 18px;
+  animation: sparkle-animation 1s ease-out forwards;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.sparkle::before {
+  content: "✨";
+}
+
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+footer {
+  background-color: #4a5c40;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
